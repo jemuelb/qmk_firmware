@@ -35,17 +35,17 @@ ________________________________________________________________________________
 
     /* Layer 1, function layer
 __________________________________________________________________________________________________________________________________  ________
-|        |        |        |        |        |        |        |        |        |        |        |        |        |            || PLAY/  |
-| RESET  |        |        |        |        |        |        |        |        |        |        |        |        |            || PAUSE  |
+|        |        |        |        |        |        |        |        |        |        |        |        |        |            ||        |
+| RESET  |        |        |        |        |        |        |        |        |        |        |        |        |   INSERT   ||        |
 |________|________|________|________|________|________|________|________|________|________|________|________|________|____________||________|
-|        |        |        |        |        |        |        |        |        |        |  LED   |  LED   |  LED   |            || VOLUME |
-|        |        |        |        |        |        |        |        |        |        | TOGGLE |  DOWN  |  UP    |            ||   UP   |
+|        |        |        |        |        |        |        |        |        |        |  LED   |  LED   |  LED   |            ||        |
+|        |        |        |        |        |        |        |        |        |        | TOGGLE |  DOWN  |  UP    |            ||        |
 |________|________|________|________|________|________|________|________|________|________|________|________|________|____________||________|
-|            |        |        |        |        |        |        |        |        |        |        |        |        |        || VOLUME |
-|  CAPS LOCK |  MUTE  | VOL DN | VOL UP |        |        |  HOME  |  PGDN  |  PGUP  |  END   |        |        |        |        ||  DOWN  |
+|            |        |        |        |        |        |        |        |        |        |        |        |        |        ||        |
+|  CAPS LOCK |  MUTE  | VOL DN | VOL UP |        |        |  HOME  |  PGDN  |  PGUP  |  END   |        |        |        |        ||        |
 |____________|________|________|________|________|________|________|________|________|________|________|________|________|________||________|
   |            |        |        |        |        |        |        |        |        |        |        |        |            |   |        |
-  |            |        |        |        |        |        |  LEFT  |  DOWN  |   UP   | RIGHT  |        |        |            |   |  MUTE  |
+  |            |        |        |        |        |        |  LEFT  |  DOWN  |   UP   | RIGHT  |        |        |            |   |  RESET |
   |____________|________|________|________|________|________|________|________|________|________|________|________|____________|___|________|
   |                |        |        |        |        |        |        |        |        |        |        |            |        |
   |                |        |        |        |        |        |        |        |        |        |        |            |        |
@@ -59,10 +59,10 @@ ________________________________________________________________________________
 */
 
   [1] = LAYOUT(
-    RESET,   KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,     KC_MPLY,
-    KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, RGB_TOG, RGB_VAD, RGB_VAI, KC_TRNS,     KC_VOLU,
-        KC_CAPS, KC_MUTE, KC_VOLD, KC_VOLU, KC_TRNS, KC_TRNS, KC_HOME, KC_PGDN, KC_PGUP, KC_END,  KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_VOLD,
-          KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, KC_TRNS, KC_TRNS,    KC_TRNS,     KC_MUTE,
+    KC_SLEP,   KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_INS,      KC_TRNS,
+    KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, RGB_TOG, RGB_VAD, RGB_VAI, KC_TRNS,     KC_TRNS,
+        KC_CAPS, KC_MUTE, KC_VOLD, KC_VOLU, KC_TRNS, KC_TRNS, KC_HOME, KC_PGDN, KC_PGUP, KC_END,  KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
+          KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, KC_TRNS, KC_TRNS,    KC_TRNS,     RESET,
               KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,   KC_TRNS,  KC_TRNS,
           KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,     KC_DEL,          KC_MPLY,      KC_TRNS, KC_TRNS, KC_TRNS,       KC_TRNS,  KC_TRNS, KC_TRNS
   ),
