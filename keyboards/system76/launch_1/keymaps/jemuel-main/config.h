@@ -1,27 +1,28 @@
 #pragma once
 
-// Layer 0
+// LED styling defined for each layer
+// Layer 0 - Solid White
 #define RGB_MATRIX_LAYER0_MODE RGB_MATRIX_SOLID_COLOR
 #define RGB_MATRIX_LAYER0_HUE 142 // 200 degrees
 #define RGB_MATRIX_LAYER0_SAT 0 // White LEDs
 #define RGB_MATRIX_LAYER0_VAL RGB_MATRIX_MAXIMUM_BRIGHTNESS
 #define RGB_MATRIX_LAYER0_SPD 75
 
-// Layer 1
+// Layer 1 - Showing bound keys in blue
 #define RGB_MATRIX_LAYER1_MODE RGB_MATRIX_CUSTOM_active_keys
 #define RGB_MATRIX_LAYER1_HUE 142 // 200 degrees
 #define RGB_MATRIX_LAYER1_SAT 255
 #define RGB_MATRIX_LAYER1_VAL RGB_MATRIX_MAXIMUM_BRIGHTNESS
 #define RGB_MATRIX_LAYER1_SPD 75
 
-// Layer 2
+// Layer 2 - Showing bound keys in red
 #define RGB_MATRIX_LAYER2_MODE RGB_MATRIX_CUSTOM_active_keys
 #define RGB_MATRIX_LAYER2_HUE 0 // 0 degrees
 #define RGB_MATRIX_LAYER2_SAT 255
 #define RGB_MATRIX_LAYER2_VAL RGB_MATRIX_MAXIMUM_BRIGHTNESS
 #define RGB_MATRIX_LAYER2_SPD 75
 
-// Layer 3
+// Layer 3 - Not currently used
 #define RGB_MATRIX_LAYER3_MODE RGB_MATRIX_CUSTOM_active_keys
 #define RGB_MATRIX_LAYER3_HUE 142 // 200 degrees
 #define RGB_MATRIX_LAYER3_SAT 255
