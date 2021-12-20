@@ -38,8 +38,8 @@ ________________________________________________________________________________
 |        |        |        |        |        |        |        |        |        |        |        |        |        |            ||        |
 |        |        |        |        |        |        |        |        |        |        |        |        |        |   INSERT   ||        |
 |________|________|________|________|________|________|________|________|________|________|________|________|________|____________||________|
-|        |        |        |        |        |        |        |        |        |        |  LED   |  LED   |  LED   |            ||        |
-|        |        |        |        |        |        |        |        |        |        | TOGGLE |  DOWN  |  UP    |            ||        |
+|        |        |        |        |        |        |        |        |        |        |        |        |        |            ||        |
+|        |        |        |        |        |        |        |        |        |        |        |        |        |            ||        |
 |________|________|________|________|________|________|________|________|________|________|________|________|________|____________||________|
 |            |        |        |        |        |        |        |        |        |        |        |        |        |        ||        |
 |  CAPS LOCK |  MUTE  | VOL DN | VOL UP |        |        |  HOME  |  PGDN  |  PGUP  |  END   |        |        |        |        ||        |
@@ -60,7 +60,7 @@ ________________________________________________________________________________
 
   [1] = LAYOUT(
     KC_TRNS,   KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_INS,    KC_TRNS,
-    KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, RGB_TOG, RGB_VAD, RGB_VAI, KC_TRNS,     KC_TRNS,
+    KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,     KC_TRNS,
         KC_CAPS, KC_MUTE, KC_VOLD, KC_VOLU, KC_TRNS, KC_TRNS, KC_HOME, KC_PGDN, KC_PGUP, KC_END,  KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
           KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, KC_TRNS, KC_TRNS,    KC_TRNS,     KC_TRNS,
               KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,   KC_TRNS,  KC_TRNS,
@@ -72,8 +72,8 @@ ________________________________________________________________________________
 |        |        |        |        |        |        |        |        |        |        |        |        |        |            ||        |
 | SLEEP  |        |        |        |        |        |        |        |        |        |        |        |        |            || RESET  |
 |________|________|________|________|________|________|________|________|________|________|________|________|________|____________||________|
-|        |        |        |        |        |        |        |        |        |        |        |        |        |            ||        |
-|        |        |        |        |        |        |        |        |        |        |        |        |        |            ||        |
+|        |        |        |        |        |        |        |        |        |        |  LED   |  LED   |  LED   |            ||        |
+|        |        |        |        |        |        |        |        |        |        | TOGGLE |  DOWN  |  UP    |            ||        |
 |________|________|________|________|________|________|________|________|________|________|________|________|________|____________||________|
 |            |        |        |        |        |        |        |        |        |        |        |        |        |        ||        |
 |            |        |        |        |        |        |        |        |        |        |        |        |        |        ||        |
@@ -95,7 +95,7 @@ ________________________________________________________________________________
 
   [2] = LAYOUT(
     KC_SLEP,   KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,   RESET,
-    KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,     KC_TRNS,
+    KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, RGB_TOG, RGB_VAD, RGB_VAI, KC_TRNS,     KC_TRNS,
         KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
           KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,    KC_TRNS,     KC_TRNS,
               KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,   KC_TRNS,  KC_TRNS,
