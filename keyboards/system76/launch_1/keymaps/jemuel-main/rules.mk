@@ -38,7 +38,7 @@ USB_6KRO_ENABLE = no        # 6key Rollover
 LTO_ENABLE = yes            # Link-time optimization for smaller binary
 
 # Add System76 EC command interface
-SRC+=../system76_ec.c
+SRC+=../system76_ec_jemuel-main.c
 
 # Add I2C driver
 SRC+=i2c.c
