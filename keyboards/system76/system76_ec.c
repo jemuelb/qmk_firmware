@@ -121,49 +121,49 @@ _Static_assert(sizeof(mode_map) == MODE_LAST, "mode_map_length");
 RGB raw_rgb_data[DRIVER_LED_TOTAL];
 
 rgb_config_t layer_rgb[DYNAMIC_KEYMAP_LAYER_COUNT] = {
-    // Layer 0
-    {
-        .enable = 1,
-        .mode = RGB_MATRIX_LAYER0_MODE,
-        .hsv = {
-            .h = RGB_MATRIX_LAYER0_HUE,
-            .s = RGB_MATRIX_LAYER0_SAT,
-            .v = RGB_MATRIX_LAYER0_VAL,
-        },
-        .speed = RGB_MATRIX_LAYER0_SPD,
-    },
     // Layer 1
     {
         .enable = 1,
-        .mode = RGB_MATRIX_LAYER1_MODE,
+        .mode = RGB_MATRIX_STARTUP_MODE,
         .hsv = {
-           .h = RGB_MATRIX_LAYER1_HUE,
-           .s = RGB_MATRIX_LAYER1_SAT,
-           .v = RGB_MATRIX_LAYER1_VAL,
+               .h = RGB_MATRIX_STARTUP_HUE,
+               .s = RGB_MATRIX_STARTUP_SAT,
+               .v = RGB_MATRIX_STARTUP_VAL,
         },
-        .speed = RGB_MATRIX_LAYER1_SPD,
+        .speed = RGB_MATRIX_STARTUP_SPD,
     },
     // Layer 2
     {
         .enable = 1,
-        .mode = RGB_MATRIX_LAYER2_MODE,
+        .mode = RGB_MATRIX_CUSTOM_active_keys,
         .hsv = {
-           .h = RGB_MATRIX_LAYER2_HUE,
-           .s = RGB_MATRIX_LAYER2_SAT,
-           .v = RGB_MATRIX_LAYER2_VAL,
+               .h = RGB_MATRIX_STARTUP_HUE,
+               .s = RGB_MATRIX_STARTUP_SAT,
+               .v = RGB_MATRIX_STARTUP_VAL,
         },
-        .speed = RGB_MATRIX_LAYER2_SPD,
+        .speed = RGB_MATRIX_STARTUP_SPD,
     },
     // Layer 3
     {
         .enable = 1,
-        .mode = RGB_MATRIX_LAYER3_MODE,
+        .mode = RGB_MATRIX_CUSTOM_active_keys,
         .hsv = {
-           .h = RGB_MATRIX_LAYER3_HUE,
-           .s = RGB_MATRIX_LAYER3_SAT,
-           .v = RGB_MATRIX_LAYER3_VAL,
+               .h = RGB_MATRIX_STARTUP_HUE,
+               .s = RGB_MATRIX_STARTUP_SAT,
+               .v = RGB_MATRIX_STARTUP_VAL,
         },
-        .speed = RGB_MATRIX_LAYER3_SPD,
+        .speed = RGB_MATRIX_STARTUP_SPD,
+    },
+    // Layer 4
+    {
+        .enable = 1,
+        .mode = RGB_MATRIX_CUSTOM_active_keys,
+        .hsv = {
+               .h = RGB_MATRIX_STARTUP_HUE,
+               .s = RGB_MATRIX_STARTUP_SAT,
+               .v = RGB_MATRIX_STARTUP_VAL,
+        },
+        .speed = RGB_MATRIX_STARTUP_SPD,
     },
 };
 
