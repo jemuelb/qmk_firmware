@@ -1,5 +1,7 @@
 #pragma once
 
+#define TAPPING_TERM 150
+
 // LED styling defined for each layer
 // Layer 0 - Solid White
 #define RGB_MATRIX_LAYER0_MODE RGB_MATRIX_SOLID_COLOR
