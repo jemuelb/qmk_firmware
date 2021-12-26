@@ -2,7 +2,10 @@
 
 // Macro declarations
 enum {
-    TGLDRK = SAFE_RANGE
+    TGLDRK = SAFE_RANGE,
+    CTRLV,
+    CTRLC,
+    CTRLX,
 };
 
 // Tap Dance declarations
@@ -76,7 +79,7 @@ ________________________________________________________________________________
   |            |        |        |        |        |        |  LEFT  |  DOWN  |   UP   | RIGHT  |        |        |            |   |        |
   |____________|________|________|________|________|________|________|________|________|________|________|________|____________|___|________|
   |                |        |        |        |        |        |        |        |        |        |        |            |        |
-  |                |        |        |        |        |        |        |        |        |        |        |            |        |
+  |                |        |  CUT   |  COPY  | PASTE  |        |        |        |        |        |        |            |        |
   |________________|________|________|________|________|________|________|________|________|________|________|____________|________|_________
   |            |        |       |        |                 |                 |        |        |             |   |        |        |        |
   |            |        |       |        |      DELETE     |   PLAY/PAUSE    |        |        |    MO(2)    |   |        |        |        |
@@ -91,7 +94,7 @@ ________________________________________________________________________________
     KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,     KC_TRNS,
     KC_CAPS, KC_MUTE, KC_VOLD, KC_VOLU, KC_TRNS, KC_TRNS, KC_HOME, KC_PGDN, KC_PGUP, KC_END,  KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,     KC_TRNS,
         KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, KC_TRNS, KC_TRNS,    KC_TRNS,       KC_TRNS,
-        KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,   KC_TRNS,      KC_TRNS,
+        KC_TRNS, KC_TRNS, CTRLX,   CTRLC,   CTRLV,   KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,   KC_TRNS,      KC_TRNS,
         KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,     KC_DEL,          KC_MPLY,      KC_TRNS, KC_TRNS, MO(3),          KC_TRNS,  KC_TRNS, KC_TRNS
   ),
 
@@ -101,7 +104,7 @@ ________________________________________________________________________________
 | SLEEP  |  F13   |  F14   |  F15   |  F16   |  F17   |  F18   |  F19   |  F20   |  F21   |  F22   |  F23   |  F24   |            || RESET  |
 |________|________|________|________|________|________|________|________|________|________|________|________|________|____________||________|
 |        |        |        |        |        |        |        |        |        |        |  LED   |  LED   |  LED   |            ||        |
-|        |        |        |        |        |        |        |        |        |        | TOGGLE |  DOWN  |  UP    |            ||        |
+|        |  DRK   |        |        |        |        |        |        |        |        | TOGGLE |  DOWN  |  UP    |            ||        |
 |________|________|________|________|________|________|________|________|________|________|________|________|________|____________||________|
 |            |        |        |        |        |        |        |        |        |        |        |        |        |        ||        |
 |            |        |        |        |        |        |        |        |        |        |        |        |        |        ||        |
@@ -141,6 +144,30 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                 // released
             }
             break;
+
+        case CTRLC:
+            if (record->event.pressed) {
+                SEND_STRING(SS_DOWN(X_LCTL) "c" SS_UP(X_LCTL) );
+            } else {
+                // released
+            }
+            break;
+        case CTRLV:
+            if (record->event.pressed) {
+                SEND_STRING(SS_DOWN(X_LCTL) "v" SS_UP(X_LCTL) );
+            } else {
+                // released
+            }
+            break;
+
+        case CTRLX:
+            if (record->event.pressed) {
+                SEND_STRING(SS_DOWN(X_LCTL) "x" SS_UP(X_LCTL) );
+            } else {
+                // released
+            }
+            break;
+
     }
     return true;
 }
