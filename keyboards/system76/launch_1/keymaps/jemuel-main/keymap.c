@@ -82,7 +82,7 @@ ________________________________________________________________________________
   |                |        |  CUT   |  COPY  | PASTE  |        |        |        |        |        |        |            |        |
   |________________|________|________|________|________|________|________|________|________|________|________|____________|________|_________
   |            |        |       |        |                 |                 |        |        |             |   |        |        |        |
-  |            |        |       |        |      DELETE     |   PLAY/PAUSE    |        |        |    MO(2)    |   |        |        |        |
+  |            |        |       |        |    LSHFT/DEL    |   PLAY/PAUSE    |        |        |    MO(2)    |   |        |        |        |
   |____________|________|_______|________|_________________|_________________|________|________|_____________|   |________|________|________|
 
 * 'RESET' resets the controller and puts the board into firmware flashing mode. If this key is hit accidentally, just unplug the board
@@ -95,7 +95,7 @@ ________________________________________________________________________________
     KC_CAPS, KC_MUTE, KC_VOLD, KC_VOLU, KC_TRNS, KC_TRNS, KC_HOME, KC_PGDN, KC_PGUP, KC_END,  KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,     KC_TRNS,
         KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, KC_TRNS, KC_TRNS,    KC_TRNS,       KC_TRNS,
         KC_TRNS, KC_TRNS, CTRLX,   CTRLC,   CTRLV,   KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,   KC_TRNS,      KC_TRNS,
-        KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,     KC_DEL,          KC_MPLY,      KC_TRNS, KC_TRNS, MO(3),          KC_TRNS,  KC_TRNS, KC_TRNS
+        KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,   LSFT_T(KC_DEL),    KC_MPLY,      KC_TRNS, KC_TRNS, MO(3),          KC_TRNS,  KC_TRNS, KC_TRNS
   ),
 
     /* Layer 3, function layer
