@@ -174,14 +174,14 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
 uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
-        case LALT_T(KC_S):
-            return TAPPING_TERM + 300;
+        case LALT_T(KC_D):
+            return TAPPING_TERM + 200;
         case LCTL_T(KC_F):
-            return TAPPING_TERM + 300;
+            return TAPPING_TERM + 200;
         case RCTL_T(KC_J):
-            return TAPPING_TERM + 300;
-        case LALT_T(KC_L):
-            return TAPPING_TERM + 300;
+            return TAPPING_TERM + 200;
+        case LALT_T(KC_K):
+            return TAPPING_TERM + 200;
         default:
             return TAPPING_TERM;
     }
