@@ -165,6 +165,17 @@ rgb_config_t layer_rgb[DYNAMIC_KEYMAP_LAYER_COUNT] = {
         },
         .speed = RGB_MATRIX_STARTUP_SPD,
     },
+    // Layer 5
+    {
+        .enable = 1,
+        .mode = RGB_MATRIX_CUSTOM_active_keys,
+        .hsv = {
+               .h = RGB_MATRIX_STARTUP_HUE,
+               .s = RGB_MATRIX_STARTUP_SAT,
+               .v = RGB_MATRIX_STARTUP_VAL,
+        },
+        .speed = RGB_MATRIX_STARTUP_SPD,
+    },
 };
 
 // Read or write EEPROM data with checks for being inside System76 EC region
