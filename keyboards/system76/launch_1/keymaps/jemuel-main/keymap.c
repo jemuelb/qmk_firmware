@@ -189,11 +189,11 @@ layer_state_t layer_state_set_user(layer_state_t state) {
             switch(biton32(default_layer_state)) {
                 case 1:
                     rgblight_sethsv_noeeprom(0, 255, RGB_MATRIX_STARTUP_VAL);
-                    rgblight_mode_noeeprom(RGB_MATRIX_RAINBOW_MOVING_CHEVRON);
+                    rgblight_mode_noeeprom(RGB_MATRIX_RAINDROPS);
                     break;
                 default:
                     rgblight_sethsv(RGB_MATRIX_STARTUP_HUE, RGB_MATRIX_STARTUP_SAT, RGB_MATRIX_STARTUP_VAL);
-                    rgblight_mode(RGB_MATRIX_SOLID_COLOR);
+                    rgblight_mode(RGB_MATRIX_RAINBOW_MOVING_CHEVRON);
                     break;
             }
             break;
