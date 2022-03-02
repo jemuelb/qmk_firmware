@@ -90,10 +90,10 @@ ________________________________________________________________________________
      /* Layer 3, function layer
 __________________________________________________________________________________________________________________________________  ________
 |        |        |        |        |        |        |        |        |        |        |        |        |        |            ||        |
-|        |  F13   |  F14   |  F15   |  F16   |  F17   |  F18   |  F19   |  F20   |  F21   |  F22   |  F23   |  F24   |   INSERT   || DF(0)  |
+|        |  F13   |  F14   |  F15   |  F16   |  F17   |  F18   |  F19   |  F20   |  F21   |  F22   |  F23   |  F24   |   INSERT   ||        |
 |________|________|________|________|________|________|________|________|________|________|________|________|________|____________||________|
 |        |        |        |        |        |        |        |        |        |        |        |        |        |            ||        |
-|        |        |        |        |        |        |        |        |        |        |        |        |        |   DELETE   || DF(1)  |
+|        |        |        |        |        |        |        |        |        |        |        |        |        |   DELETE   ||        |
 |________|________|________|________|________|________|________|________|________|________|________|________|________|____________||________|
 |            |        |        |        |        |        |        |        |        |        |        |        |        |        ||        |
 |  CAPS LOCK |  MUTE  | VOL DN | VOL UP |        |        |  HOME  |  PGDN  |  PGUP  |  END   |        |        |        |        ||        |
@@ -167,4 +167,36 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
         default:
             return TAPPING_TERM;
     }
+}
+
+// changes underglow based on current layer
+layer_state_t layer_state_set_user(layer_state_t state) {
+    switch (get_highest_layer(state)) {
+        // Deals with momentary layers - MO(#)
+        case 2:
+            rgblight_sethsv_noeeprom(201, 255, RGB_MATRIX_STARTUP_VAL);
+            rgblight_mode_noeeprom(RGB_MATRIX_CUSTOM_active_keys);
+            break;
+        case 3:
+            rgblight_sethsv_noeeprom(148, 255, RGB_MATRIX_STARTUP_VAL);
+            rgblight_mode_noeeprom(RGB_MATRIX_CUSTOM_active_keys);
+            break;
+        case 4:
+            rgblight_sethsv_noeeprom(0, 255, RGB_MATRIX_STARTUP_VAL);
+            rgblight_mode_noeeprom(RGB_MATRIX_CUSTOM_active_keys);
+            break;
+        default: // Deals with default layers - DF(#)
+            switch(biton32(default_layer_state)) {
+                case 1:
+                    rgblight_sethsv_noeeprom(0, 255, RGB_MATRIX_STARTUP_VAL);
+                    rgblight_mode_noeeprom(RGB_MATRIX_RAINBOW_MOVING_CHEVRON);
+                    break;
+                default:
+                    rgblight_sethsv(RGB_MATRIX_STARTUP_HUE, RGB_MATRIX_STARTUP_SAT, RGB_MATRIX_STARTUP_VAL);
+                    rgblight_mode(RGB_MATRIX_SOLID_COLOR);
+                    break;
+            }
+            break;
+    }
+    return state;
 }
